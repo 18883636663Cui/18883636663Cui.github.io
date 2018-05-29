@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<title>Our Boys: Stern Squad and Bow Gang</title>
+   </head>
+   <body>
+  	Hello Crew!
+  	<p>My name is<input id="yourName" size="20"></p>
+  	<p>I am a<select id="rowerOrCoxswain">
+                        	<option>rower</option>
+                        	<option>coxswain</option>
+                        	<option>rower and a coxswain</option>
+                        	</select>
+    </p>
+    <p>I <select id="whatIDo">
+                        	<option>row port side</option>
+                        	<option>row starboard side</option>
+                        	<option>row both sides</option>
+                        	<option>steer the boat and give orders</option>
+                        	<option>both row and cox</option>
+                   	  </select>
+  	</p>
+  	<p><button onclick="doLoop()">Double check</button>
+  	</p>
+  	<p><div id="results"></div>
+  	<script type="text/javascript">
+       function doLoop() {
+        	//put the value of the text box in a var called sayWhat
+        	var nameSir = document.getElementById('yourName').value;
+        //put the value of the dropdown box in a var called maxLoop
+        	var loop = document.getElementById('rowerOrCoxswain').value
+            var nLoop = document.getElementById('whatIDo').value
+            var str = 'My name is ' + nameSir + '. ' + 'I am a ' + loop + '. ' + 'I can ' + nLoop + '. '
+            
+            document.getElementById('results').innerHTML=str
+        	}
+  	</script>
+  	<p>I am <input id="age" size="20"> years old</p>
+  	<p>I <select id="condition"> 
+  	              <option>am</option>
+  	              <option>am not</option>
+  	              </select>having a valid physical</p>
+  	<p>Why are you taking a 2K test?</p>
+  	<input id="reason" size="90">
+  	<p id = 'demo'>Submit the survey</p>
+  	
+  	<button type='button' onclick="document.getElementById('demo').innerHTML='Submitted!'">Submit</button>
+  
+  	<p>I need <input id="erg#" size="20"> ergs</p>
+    erg/ergs. (10$ each, 5$ for cleaning on each)</p>
+    <p><div id='money'></div>
+   <script type="text/javascript">
+   function fee() {
+   var ergs = document.getElementById('erg#').value
+   var totalFee = 10 * ergs + 5 * ergs;
+   var $ = 'The fee for the ergs is ' + totalFee + '$'
+   document.getElementById('money').innerHTML=$
+   }
+   
+   </script>
+   <button type='button' onclick="fee()"></button>
+   </html>
+   
+    
+  	
+  
+  	
+
